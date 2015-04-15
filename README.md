@@ -62,25 +62,33 @@ var options = {
 Rules can be singular or multiple (separated via a pipe `|`) like: `required|text|min:5|max:255`
 
 **required**
+
 Will trigger the message `{name} field is required.` when the input value is empty.
 
 **ticked**
+
 Will trigger the message `{name} field must be ticked.` when the input value is not checked.
 
 **text**
+
 Will trigger the message `{name} field can only contain letters, spaces, numbers and apostrophes.` when the input value is not a letter, space, number or apostrophe.
 
 **date**
+
 Will trigger the message `{name} field must follow this format: day/month/year.` when the input value does not follow the format day/month/year.
 
 **email**
+
 Will trigger the message `{name} field must be a valid email address.` when the input value is not a valid email address.
 
 **number**
+
 Will trigger the message `{name} field can only contain numbers and spaces.` when the input value is not a number.
 
 **min**
+
 Will trigger the message `{name} field must be {value} or more characters.` when the input value's length is less than the `{value}`. This rule expects a value like `min:5`
 
 **max**
+
 Will trigger the message `{name} field must be {value} or less characters.` when the input value's length is more than the `{value}`. This rule expects a value like `max:35`
