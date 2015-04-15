@@ -59,18 +59,26 @@ var options = {
 
 ### Rules
 
-`required` rule will trigger the message `{name} field is required.` when the input value is empty.
+##### required
+Will trigger the message `{name} field is required.` when the input value is empty.
 
-`ticked` rule will trigger the message `{name} field must be ticked.` when the input value is not checked.
+##### ticked
+Will trigger the message `{name} field must be ticked.` when the input value is not checked.
 
-`text` rule will trigger the message `{name} field can only contain letters, spaces, numbers and apostrophes.` when the input value is not a letter, space, number or apostrophe.
+##### text
+Will trigger the message `{name} field can only contain letters, spaces, numbers and apostrophes.` when the input value is not a letter, space, number or apostrophe.
 
-`date` rule will trigger the message `{name} field must follow this format: day/month/year.` when the input value does not follow the format day/month/year.
+##### date
+Will trigger the message `{name} field must follow this format: day/month/year.` when the input value does not follow the format day/month/year.
 
-`email` rule will trigger the message `{name} field must be a valid email address.` when the input value is not a valid email address.
+##### email
+Will trigger the message `{name} field must be a valid email address.` when the input value is not a valid email address.
 
-`number` rule will trigger the message `{name} field can only contain numbers and spaces.` when the input value is not a number.
+##### number
+Will trigger the message `{name} field can only contain numbers and spaces.` when the input value is not a number.
 
-`min` rule will trigger the message `{name} field must be {value} or more characters.` when the input value's length is less than the `{value}`. This rule expects a value like `min:5`
+##### min
+Will trigger the message `{name} field must be {value} or more characters.` when the input value's length is less than the `{value}`. This rule expects a value like `min:5`
 
-`max` rule will trigger the message `{name} field must be {value} or less characters.` when the input value's length is more than the `{value}`. This rule expects a value like `max:35`
+##### max
+Will trigger the message `{name} field must be {value} or less characters.` when the input value's length is more than the `{value}`. This rule expects a value like `max:35`

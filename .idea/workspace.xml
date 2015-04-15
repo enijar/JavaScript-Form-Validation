@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a5084ecb-d487-4a57-9308-d45f287459c1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-    </list>
+    <list default="true" id="a5084ecb-d487-4a57-9308-d45f287459c1" name="Default" comment="" />
     <ignored path="JavaScript-Form-Validation.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -41,8 +39,8 @@
           <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/README.md">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.90174675" vertical-offset="299" max-vertical-offset="1215">
-                  <caret line="75" column="184" selection-start-line="75" selection-start-column="184" selection-end-line="75" selection-end-column="184" />
+                <state vertical-scroll-proportion="0.90174675" vertical-offset="404" max-vertical-offset="1335">
+                  <caret line="82" column="9" selection-start-line="82" selection-start-column="9" selection-end-line="82" selection-end-column="9" />
                   <folding />
                 </state>
               </provider>
@@ -267,8 +265,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.90174675" vertical-offset="299" max-vertical-offset="1215">
-          <caret line="75" column="184" selection-start-line="75" selection-start-column="184" selection-end-line="75" selection-end-column="184" />
+        <state vertical-scroll-proportion="0.90174675" vertical-offset="404" max-vertical-offset="1335">
+          <caret line="82" column="9" selection-start-line="82" selection-start-column="9" selection-end-line="82" selection-end-column="9" />
           <folding />
         </state>
       </provider>
