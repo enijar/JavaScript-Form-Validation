@@ -59,7 +59,7 @@ var options = {
 
 ### Rules
 
-Rules can be singular or multiple (separated via a pipe `|`) like: `input: required|text|min:5|max:255`
+Rules can be singular or multiple (separated via a pipe `|`) like: `required|text|min:5|max:255`
 
 **required**
 
