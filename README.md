@@ -33,7 +33,7 @@ $(function() {
 
 `errorMessage: html` The error message HTML that will be shown under each form input.
 
-`errorMessages: element` The element to contain groups of error messages. This overwrites `errorMessage`.
+`errorMessages: element` The element to contain groups of error messages. This overwrites `errorMessage` property.
 
 `errorLimit: int` The number of errors that will be shown for each input. Leave this property out for maximum errors.
 
@@ -59,3 +59,18 @@ var options = {
 
 ### Rules
 
+`required` rule will trigger the message `{name} field is required.` when the input value is empty.
+
+`ticked` rule will trigger the message `{name} field must be ticked.` when the input value is not checked.
+
+`text` rule will trigger the message `{name} field can only contain letters, spaces, numbers and apostrophes.` when the input value is not a letter, space, number or apostrophe.
+
+`date` rule will trigger the message `{name} field must follow this format: day/month/year.` when the input value does not follow the format day/month/year.
+
+`email` rule will trigger the message `{name} field must be a valid email address.` when the input value is not a valid email address.
+
+`number` rule will trigger the message `{name} field can only contain numbers and spaces.` when the input value is not a number.
+
+`min` rule will trigger the message `{name} field must be {value} or more characters.` when the input value's length is less than the `{value}`. This rule expects a value like `min:5`
+
+`max` rule will trigger the message `{name} field must be {value} or less characters.` when the input value's length is more than the `{value}`. This rule expects a value like `max:35`
