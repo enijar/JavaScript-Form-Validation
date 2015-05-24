@@ -16,9 +16,13 @@
             <div id="container">
 
                 <form id="signUpForm" method="post" autocomplete="off">
+                    <div id="errors"></div>
+
                     <div class="form-group">
                         <label for="age">Age</label>
                         <input type="text" name="age" id="age" class="form-control">
+
+                        <div class="has-error"></div>
                     </div>
 
                     <div class="form-group">
@@ -50,17 +54,19 @@
         <script>
             $(function() {
                 var signUpForm = new Validator;
-
-                signUpForm.validate({
+                var options = {
                     async: true,
                     form: $('#signUpForm'),
-                    errorMessage: '<div class="error red">{message}</div>',
+                    errorMessages: $('#errors'),
+                    errorMessage: '<div class="text-danger">{message}</div>',
                     rules: {
                         age: 'required|number|max:2',
                         name: 'required|text',
                         email: 'required|email|max:255'
                     }
-                });
+                };
+
+                signUpForm.validate(options);
             });
         </script>
     </body>

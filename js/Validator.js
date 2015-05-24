@@ -38,6 +38,7 @@ var Validator = function() {
 
     var $options = {
         errorMessage: '<div class="error">{message}</div>',
+        errorMessages: false,
         hasErrors: false,
         errors: {},
         messages: {
@@ -56,6 +57,8 @@ var Validator = function() {
     };
 
     $this.validate = function(options) {
+        $options['errorClass'] = (new Date()).getTime() + '-' + Math.floor(Math.random() * 9999) + 1;
+
         for(var index in options) {
             $options[index] = options[index];
         }
@@ -124,12 +127,17 @@ var Validator = function() {
     };
 
     var showErrors = function(errors) {
-        $('.error').remove();
+        $($options.errorClass).remove();
 
         $.each(errors, function(name, object) {
             $.each(object, function(index, error) {
                 var message = $options.errorMessage.replace(/\{message\}/i, error.message);
-                error.selector.parent().append(message);
+
+                if(!$options.errorMessages) {
+                    error.selector.parent().append(message);
+                } else {
+                    $options.errorMessages.append(message);
+                }
             });
         });
 
