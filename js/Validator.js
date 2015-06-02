@@ -72,6 +72,8 @@ var Validator = function() {
     };
 
     var testRules = function() {
+        $options.hasErrors = false;
+
         for(var input in $options.rules) {
             if($options.rules.hasOwnProperty(input)) {
                 var rules = $options.rules[input].split('|');
@@ -82,15 +84,22 @@ var Validator = function() {
             }
         }
 
-        if(!$options.hasErrors) {
-            $(this).removeClass('has-errors');
-            $(this).submit();
+        if($options.onSubmit !== undefined) {
+            $options.onSubmit({
+                event: event,
+                passes: !$options.hasErrors
+            });
         } else {
-            $(this).addClass('has-errors');
-            event.preventDefault();
-        }
+            if(!$options.hasErrors) {
+                $(this).removeClass('has-errors');
+                $(this).submit();
+            } else {
+                $(this).addClass('has-errors');
+                event.preventDefault();
+            }
 
-        showErrors($options.errors);
+            showErrors($options.errors);
+        }
     };
 
     var testRule = function(input, rule) {
@@ -113,7 +122,7 @@ var Validator = function() {
             }
 
             var message = $options.messages[rule[0]].replace(/\{name\}/, input);
-                message = message.replace(/\{value\}/, rule[1]);
+            message = message.replace(/\{value\}/, rule[1]);
 
             $options.errors[input].push({
                 selector: selector,
